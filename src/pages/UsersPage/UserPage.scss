@@ -1,0 +1,16 @@
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // 3 карточки в ряд
+  gap: 20px; // расстояние между карточками
+  margin-bottom: 40px;
+  max-width: 1160px;
+  max-height: 730px;
+}
+.usersgrid {
+  display: flex;
+  justify-content: center;
+}
+.main-body {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
