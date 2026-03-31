@@ -90,7 +90,7 @@ export const UserEditPage = () => {
         </div>
       </div>
       <div className="back-cont">
-        <div className="arrow">
+        <div className="arrow" onClick={() => navigate("/")}>
           <img src="/arrow-left.png" alt="" />
           <div>Назад</div>
         </div>
@@ -167,8 +167,14 @@ export const UserEditPage = () => {
       {showModal && (
         <div className="edit-page__modal">
           <div className="edit-page__modal-content">
+            <img src="/Checked-box.png" alt="" />
+            <img
+              src="/Box.png"
+              className="back-box"
+              alt=""
+              onClick={() => setShowModal(false)}
+            />
             <p>Изменения сохранены!</p>
-            <button onClick={() => setShowModal(false)}>Закрыть</button>
           </div>
         </div>
       )}
