@@ -18,7 +18,7 @@ type UsersState = {
       city: string;
       phone: string;
       company: string;
-    },
+    }
   ) => void;
 };
 
@@ -68,7 +68,7 @@ export const useUsersStore = create<UsersState>((set) => ({
                   name: data.company,
                 },
               }
-            : u,
+            : u
         );
 
       return {

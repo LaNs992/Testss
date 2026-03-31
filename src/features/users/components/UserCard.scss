@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #fdfdfd; // 06 - FDFDFD
+  background-color: #fdfdfd;
   border-radius: 16px;
 
   margin-bottom: 16px;
@@ -43,7 +43,7 @@
     &__company {
       font-weight: 400;
       font-size: 14px;
-      color: #595959; // 02 - темный серый
+      color: #595959;
       margin: 2px 0;
       font-family: "Manrope", sans-serif;
     }
@@ -55,7 +55,7 @@
     flex-direction: column;
 
     .user-card__btn {
-      background-color: #161616; // 01 - черный
+      background-color: #161616;
       color: #fff;
       font-size: 14px;
       font-weight: 500;
@@ -66,7 +66,7 @@
       transition: background-color 0.2s;
 
       &:hover {
-        background-color: #22a0bc; // Accent
+        background-color: #22a0bc;
       }
     }
   }
@@ -88,7 +88,7 @@
     text-align: right;
 
     &-img {
-      width: 20px; // размер картинки с точками
+      width: 20px;
       height: 20px;
       cursor: pointer;
     }
@@ -124,23 +124,23 @@
       }
     }
     &--archived {
-      background-color: #f5f5f5; // светло-серый фон
-      color: #a0a0a0; // серый текст
+      background-color: #f5f5f5;
+      color: #a0a0a0;
       border-color: #d0d0d0;
 
       &.user-card__avatar {
-        filter: grayscale(100%); // аватар тоже серый
+        filter: grayscale(100%);
       }
 
       &.user-card__menu-img {
         filter: grayscale(100%);
-        cursor: default; // меню неактивное
+        cursor: default;
       }
     }
   }
 }
 .user-card--archived {
-  filter: grayscale(100%); // аватар тоже серый
+  filter: grayscale(100%);
 }
 .user-card__dropdown {
   padding-left: 20px;
@@ -158,7 +158,7 @@
 .user-card__username {
   font-weight: 600;
   font-size: 20px;
-  color: #22a0bc; // Accent color
+  color: #22a0bc;
   margin-bottom: 4px;
   margin-top: 0px;
   font-family: "Manrope", sans-serif;
@@ -176,7 +176,7 @@
   padding-top: 0;
   margin-bottom: 0px;
 }
-/* Контейнер карточек */
+
 .users-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(312px, 1fr));
