@@ -1,4 +1,7 @@
 import { createHashRouter, RouterProvider } from "react-router-dom";
+import { UsersPage } from "./pages/UsersPage";
+import { UserEditPage } from "./pages/UserEditPage";
+import { AppProviders } from "./app/providers";
 
 const router = createHashRouter([
   { path: "/", element: <UsersPage /> },
@@ -6,5 +9,9 @@ const router = createHashRouter([
 ]);
 
 export const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <AppProviders>
+      <RouterProvider router={router} />
+    </AppProviders>
+  );
 };
