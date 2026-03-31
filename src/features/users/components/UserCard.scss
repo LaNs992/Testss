@@ -3,42 +3,49 @@
   flex-direction: row;
   align-items: center;
   background-color: #fdfdfd; // 06 - FDFDFD
-  border-radius: 12px;
+  border-radius: 16px;
 
   margin-bottom: 16px;
-  width: 200px;
-  width: 360px;
   max-height: 168px;
+  width: 312px;
 
   &__avatar {
     width: 112px;
     height: 120px;
     border-radius: 8px;
     object-fit: cover;
-    margin-bottom: 12px;
   }
 
   &__info {
     text-align: center;
-    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     text-align: left;
 
     &__username {
+      font-family: "Manrope", sans-serif;
       font-weight: 600;
-      font-size: 16px;
-      color: #22a0bc; // Accent color
-      margin-bottom: 4px;
+      font-style: SemiBold;
+      font-size: 20px;
+      line-height: 100%;
+      letter-spacing: 0%;
     }
 
-    &__city,
+    &__city {
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
     &__company {
       font-weight: 400;
       font-size: 14px;
       color: #595959; // 02 - темный серый
       margin: 2px 0;
+      font-family: "Manrope", sans-serif;
     }
   }
 
@@ -65,19 +72,18 @@
   }
 }
 .user-card {
+  margin-right: 25px;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #fdfdfd;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 16px;
-  max-width: 360px;
+  border-radius: 16px;
+  padding: 24px;
 
   &__menu {
     position: absolute;
-    top: 16px;
+    top: 30px;
     right: 16px;
     text-align: right;
 
@@ -117,12 +123,37 @@
         }
       }
     }
+    &--archived {
+      background-color: #f5f5f5; // светло-серый фон
+      color: #a0a0a0; // серый текст
+      border-color: #d0d0d0;
+
+      &.user-card__avatar {
+        filter: grayscale(100%); // аватар тоже серый
+      }
+
+      &.user-card__menu-img {
+        filter: grayscale(100%);
+        cursor: default; // меню неактивное
+      }
+    }
   }
 }
+.user-card--archived {
+  filter: grayscale(100%); // аватар тоже серый
+}
 .user-card__dropdown {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-color: white;
   text-align: left;
   border-radius: 12px;
+  font-family: "Manrope", sans-serif;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  width: 180px;
+  height: 146px;
 }
 .user-card__username {
   font-weight: 600;
@@ -130,16 +161,18 @@
   color: #22a0bc; // Accent color
   margin-bottom: 4px;
   margin-top: 0px;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: "Manrope", sans-serif;
+}
+.user-card__company {
+  font-family: "Manrope", sans-serif;
+  color: #595959;
+  margin: 0px 0px 30px 0px;
+  font-size: 16px;
+}
+.user-card__city {
+  font-family: "Manrope", sans-serif;
+  color: #9c9c9c;
+  font-size: 14px;
+  padding-top: 0;
+  margin-bottom: 0px;
 }

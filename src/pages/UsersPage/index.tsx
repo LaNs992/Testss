@@ -26,7 +26,25 @@ export const UsersPage = () => {
 
   return (
     <div className="main-body">
-      <h1>Активные</h1>
+      <div className="header">
+        <div className="header-container">
+          <div className="logo">
+            <img className="logo-img" src="/logo-sign.png" alt="" />
+            <img className="logo-text" src="/namecorp.png" alt="" />
+          </div>
+          <div className="header-right">
+            <div className="favorite">
+              <img className="fav-icon" src="/Favorite.png" alt="" />
+              <img src="/Group.png" alt="" />
+            </div>
+            <div className="profile">
+              <img className="prof-icon" src="/Foto.png" alt="" />
+              <div>Ivan1234</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 className="main-text">Активные</h1>
       <div className="usersgrid">
         <div className="users-grid">
           {activeUsers.map((user) => (
@@ -39,14 +57,16 @@ export const UsersPage = () => {
           ))}
         </div>
       </div>
-      <h1>Архив</h1>
+      <h1 className="main-text">Архив</h1>
       <div className="usersgrid">
         <div className="users-grid">
           {archivedUsers.map((user) => (
-            <div key={user.id}>
-              <UserCard user={user} onArchive={() => {}} onHide={() => {}} />
-              <button onClick={() => restoreUser(user.id)}>Вернуть</button>
-            </div>
+            <UserCard
+              key={user.id}
+              user={user}
+              onRestore={restoreUser}
+              isArchived={true}
+            />
           ))}
         </div>
       </div>
