@@ -1,16 +1,10 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import { UsersPage } from "../pages/UsersPage";
 import { UserEditPage } from "../pages/UserEditPage";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <UsersPage />,
-  },
-  {
-    path: "/user/:id",
-    element: <UserEditPage />,
-  },
+const router = createHashRouter([
+  { path: "/", element: <UsersPage /> },
+  { path: "/user/:id", element: <UserEditPage /> },
 ]);
 
 export const AppRouter = () => {
